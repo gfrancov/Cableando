@@ -3,10 +3,11 @@
 ?>
     <div class="main-wrapper main full-size">
         <div class="container">
-            <div class="card-columns" style="text-align:center;">
+            <div class="card-columns mt-5" style="text-align:center;">
+            <h1 class="text-light"><?php single_cat_title(); ?></h1>
         <?php 
                 // the query
-                $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1, 'category__not_in' => array(get_cat_ID('recurso')) )); ?>
+                $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1, 'cat' => get_queried_object_id() )); ?>
                 
                 <?php if ( $wpb_all_query->have_posts() ) : ?>
                 
@@ -29,7 +30,7 @@
                     <?php wp_reset_postdata(); ?>
                 
                 <?php else : ?>
-                    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                    <p class="text-light"><?php _e( 'No hemos encontrado artículos sobre ello :(.' ); ?></p>
                 <?php endif; ?>
             </div>
         </div>

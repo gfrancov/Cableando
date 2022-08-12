@@ -19,15 +19,15 @@
                     <a class="nav-link" href="/">Inicio</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/articulos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Articulos
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu">
                         <a class="dropdown-item" href="/category/desarrollo">Desarrollo</a>
                         <a class="dropdown-item" href="/category/sistemas">Sistemas</a>
                         <a class="dropdown-item" href="/category/tecnologia">Tecnología</a>
                         <a class="dropdown-item" href="/category/actualidad">Actualidad</a>
-                    </div>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/recursos">Recursos</a>

@@ -21,10 +21,12 @@ body {
 h1 {
     font-weight: 800;
     font-size: 40px;
+    margin: 0;
 }
 h2 {
     font-weight: 800;
     font-size: 25px;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -176,4 +178,97 @@ nav img {
     pointer-events: auto;
     content: "";
     background-color: rgba(0,0,0,0);
+}
+
+/* Default webpage */
+.page .container {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* Posts */
+.sidebar-block {
+    padding: 15px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #181818;
+}
+.sidebar-block h3 {
+    font-weight: 700;
+}
+#indice ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 10px;
+}
+#indice ul li a {
+    color: rgba(255, 255, 255, 0.642);
+}
+#indice ul li a:hover {
+    color: rgba(255, 255, 255, 0.858);
+}
+.sidebar {
+    position: fixed;
+    max-width: 25vw;
+}
+.post-image {
+    border-radius: 20px !important;
+}
+#post-content {
+    background-color: #2c2c2cb5;
+    padding: 2em;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 18px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+.post-title {
+    color: #fff;
+    font-weight: 300;
+}
+#changeVisibility {
+    background-color: #525252;
+    border-color: #525252;
+    text-align: center;
+}
+.article-card {
+    width: 20em;
+    display: inline-block;
+    transition: transform .2s;
+    background-color: #2c2c2c;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+}
+.article-card:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+}
+.article-card .card-img-top {
+    height: auto !important;
+    border-radius: 20px 20px 0 0;
+}
+.article-card .card-body {
+    padding: 30px;
+}
+
+/* Code Syntax Block */
+.wp-block-code {
+	border-radius: 20px !important;
+}
+.wp-block-code code {
+	margin: 0;
+}
+.prism-titlename {
+	margin-top: 0;
+	margin-right: 5px;
+	border-radius: 20px;
+	color: #fff;
+	font-family: 'Inter';
+	font-weight: 500;
 }

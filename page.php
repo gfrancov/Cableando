@@ -1,10 +1,10 @@
 <?php 
     get_header();
 ?>
-    <div class="main-wrapper main mt-4">
+    <div class="main-wrapper main mt-4 page">
         <div class="container">
                 
-        <h1><?php the_title(); ?></h1>
+        <h1 class="mb-4"><?php the_title(); ?></h1>
 
                 <?php
 

@@ -1,92 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://pre.cableando.net/wp-content/uploads/2022/08/cableando-square.png">
-    <?php wp_head() ?>
-</head>
-<body>
-    <!-- Page content-->
-    <div class="container blog-post" style="max-width: 100vw;">
-        <div class="row">
-            <!-- Side widgets-->
-            <div class="col-lg-3 sidebar-post pt-4">
-                <!-- Side widget-->
-                <h3>Contenido</h3>
-                <div class="indice" id="indice">
-                    
-                </div>
-            </div>
-            <div class="col-lg-8 mt-4">
-                <article>
-                    <figure class="mb-4"><?php the_post_thumbnail( 'post-thumbnail', ['class' => 'img-fluid rounded'] ); ?></figure>
-                    <header class="mb-4">
-                        <div class="text-muted fst-italic mb-2">Publicado el <?php the_time('j'); ?> de <?php the_time('F'); ?> del <?php the_time('Y'); ?> por <?php the_author(); ?></div>
-                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
-                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
-                    </header>
-                    <section class="mb-5" id="post-content">
-                        <h1 class="fw-bolder mb-1"><?php the_title(); ?></h1>
-                        <?php
-
-                            if( have_posts() ) {
-                                while( have_posts() ) {
-                                    the_post();
-                                    the_content();
-                                }
-                            }
-
-                        ?>
-                    </section>
-                </article>
-                <!-- Comments section-->
-                <section class="mb-5">
-                    <div class="card bg-light">
-                        <div class="card-body">
-                            <!-- Comment form-->
-                            <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
-                            <!-- Comment with nested comments-->
-                            <div class="d-flex mb-4">
-                                <!-- Parent comment-->
-                                <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                <div class="ms-3">
-                                    <div class="fw-bold">Commenter Name</div>
-                                    If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.
-                                    <!-- Child comment 1-->
-                                    <div class="d-flex mt-4">
-                                        <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                        <div class="ms-3">
-                                            <div class="fw-bold">Commenter Name</div>
-                                            And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
-                                        </div>
-                                    </div>
-                                    <!-- Child comment 2-->
-                                    <div class="d-flex mt-4">
-                                        <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                        <div class="ms-3">
-                                            <div class="fw-bold">Commenter Name</div>
-                                            When you put money directly to a problem, it makes a good headline.
-                                        </div>
-                                    </div>
-                                </div>
+<?php 
+    get_header();
+?>
+    <div class="mt-4 post">
+        <div class="container" style="max-width: 100vw !important;">
+            <div class="row">
+                <div class="col-lg-3 d-none d-lg-block d-xl-block">
+                    <div class="container sidebar">
+                        <div class="container sidebar-block">
+                            <!-- Side widget-->
+                            <h3>Contenido</h3>
+                            <div class="indice" id="indice">
+                                
                             </div>
-                            <!-- Single comment-->
-                            <div class="d-flex">
-                                <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                <div class="ms-3">
-                                    <div class="fw-bold">Commenter Name</div>
-                                    When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
-                                </div>
+                        </div>
+                        <div class="container sidebar-block mt-4">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" name="changeVisibility" id="changeVisibility">
+                                <label class="form-check-label" for="changeVisibility" id="visibility-text">Cambiar a claro</label>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <div class="col-lg-8">
+                    <div class="container ml-4 mr-4 mt-4">
+                        <article>
+                            <h1 class="fw-bolder mb-4 post-title"><?php the_title(); ?></h1>
+                            <figure class="mb-4"><?php the_post_thumbnail( 'post-thumbnail', ['class' => 'img-fluid rounded post-image' ] ); ?></figure>
+                            <header class="mb-4">
+                                <div class="text-light mb-2">Publicado el <?php the_time('j'); ?> de <?php the_time('F'); ?> del <?php the_time('Y'); ?> <?php $author_id=$post->post_author ?> por <a class="text-light" style="font-weight: 700;" href="/author/<?php echo get_the_author_meta('user_login', $author_id); ?>"><?php echo get_the_author_meta('display_name', $author_id); ?></a>.</div>
+                            </header>
+                            <section class="mb-5" id="post-content">
+                                <?php
+
+                                    if( have_posts() ) {
+                                        while( have_posts() ) {
+                                            the_post();
+                                            the_content();
+                                        }
+                                    }
+
+                                ?>
+                            </section>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script>
+        var darkMode = 1;
+
         function crearIndice() {
             const allTitles = document.querySelectorAll('#post-content h2, #post-content h3, #post-content h4');
             var indice = "<ul>";
@@ -97,11 +60,33 @@
             indice += "</ul>";
             document.getElementById("indice").innerHTML = indice;
         }
+        
+        function changeVisibility() {
+            const checkboxVisibility = document.getElementById("changeVisibility");
+            /* Disable or enable dark mode */
+            if(darkMode == 1) {
+                document.getElementById('post-content').style.backgroundColor = "#fff";
+                document.getElementById('post-content').style.color = "#000";
+                document.getElementById('visibility-text').innerHTML = "Cambiar a oscuro"
+                darkMode = 0;
+            } else {
+                document.getElementById('post-content').style.backgroundColor = "#2c2c2cb5";
+                document.getElementById('post-content').style.color = "#fff";
+                document.getElementById('visibility-text').innerHTML = "Cambiar a claro"
+                darkMode = 1;
+            }
+            console.log(darkMode);
+        }
+
         window.onload = function() {
             crearIndice();
+
+            const buttonVisibility = document.getElementById('changeVisibility');
+            buttonVisibility.addEventListener("click", changeVisibility);
+
         }
     </script>
-                                
+
 <?php
     get_footer();
 ?>
