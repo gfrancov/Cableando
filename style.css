@@ -1,0 +1,179 @@
+/*
+Theme Name: Cableando
+Text Domain: cableando.net
+Version: 1.0
+Description: Cuidado que doy la corriente
+Tags: responisve
+Author: Gabriel Franco
+Author URI: https://gabi.work/
+*/
+
+@import"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color:rgb(20, 20, 20);
+    animation: dynBackground 30s infinite alternate;
+}
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+}
+h2 {
+    font-weight: 800;
+    font-size: 25px;
+}
+a {
+    text-decoration: none;
+}
+@keyframes dynBackground {
+    0% {
+        background-color: #1488cc;
+        }
+    25% {
+        background-color: #aa076b;
+        }
+    50% {
+        background-color: #f09819;
+        }
+    75% {
+        background-color: #780206;
+        }
+    100% {
+        background-color: #0b8793;
+        }
+}
+
+/* Navigation bar */
+nav {
+    min-height: 10vh;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    padding: 0 !important;
+    padding-right: 10vw !important;
+    padding-left: 10vw !important;
+    background-color: transparent !important;
+}
+nav img {
+    width: 70px;
+}
+.navbar-brand {
+    margin: 0 !important;
+    margin-right: 5vw !important;
+    padding: 0 !important;
+}
+.nav-item a {
+    font-weight: 800;
+    font-size: 20px;
+}
+.navbar-toggler {
+    color: #fff !important;
+    border: none;
+}
+.navbar-toggler:hover, .navbar-toggler:focus {
+    outline: none;
+}
+.navbar-toggler i {
+    font-size: 30px;
+}
+.dropdown-menu {
+    background-color: #2c2c2c;
+    border-radius: 20px;
+}
+.dropdown-item {
+    color: #fff;
+    font-weight: 600 !important;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+/* Landing Page */
+.landing-page {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cableando-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cableando-logo img {
+    width: 100px;
+    transition: transform .2s;
+}
+.cableando-logo img:hover {
+    transform: scale(1.5);
+}
+.link-card {
+    max-height: 40vh;
+    transition: transform .2s;
+    text-align: center;
+    background-color: #2c2c2c;
+    border-radius: 20px;
+}
+.link-card .card-body {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.link-card .card-icon img {
+    width: 50px;
+}
+.link-card h5.card-title {
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.link-card:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+}
+.link-card .card-text {
+    font-weight: 200;
+    text-align: left;
+}
+.stretched-link {
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    border: none;
+}
+.stretched-link:hover {
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    border: none;
+    outline: none !important;
+}
+.stretched-link:focus {
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    border: none !important;
+    outline: none !important;
+}
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
