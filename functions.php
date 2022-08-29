@@ -47,6 +47,7 @@ function cableando_register_scripts() {
     wp_enqueue_script('cableando-popper', "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js", array(), "2.1.3", true);
     wp_enqueue_script('cableando-bootstrapjs', "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js", array(), "2.1.3", true);
     wp_enqueue_script('fontawesome', "https://kit.fontawesome.com/378145776d.js", array(), "1.0.0");
+    wp_enqueue_script('cableando-nav-selector', get_template_directory_uri() . "/nav-selector.js", array(), "1.0.0");
 
 }
 

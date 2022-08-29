@@ -33,19 +33,19 @@ a {
 }
 @keyframes dynBackground {
     0% {
+        background-color: rgb(20, 20, 20);
+    }
+    25% {
         background-color: #1488cc;
         }
-    25% {
+    50% {
         background-color: #aa076b;
         }
-    50% {
+    75% {
         background-color: #f09819;
         }
-    75% {
-        background-color: #780206;
-        }
     100% {
-        background-color: #0b8793;
+        background-color: #780206;
         }
 }
 
@@ -103,50 +103,8 @@ nav img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.cableando-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.cableando-logo img {
-    width: 100px;
-    transition: transform .2s;
-}
-.cableando-logo img:hover {
-    transform: scale(1.5);
-}
-.link-card {
-    max-height: 40vh;
-    transition: transform .2s;
-    text-align: center;
-    background-color: #2c2c2c;
-    border-radius: 20px;
-}
-.link-card .card-body {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-}
-.link-card .card-icon img {
-    width: 50px;
-}
-.link-card h5.card-title {
-    font-weight: 800;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-.link-card:hover {
-    transform: scale(1.1);
-    -webkit-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
-}
-.link-card .card-text {
-    font-weight: 200;
-    text-align: left;
+    color: #fff;
 }
 .stretched-link {
     background-color: #fff;
@@ -178,6 +136,44 @@ nav img {
     pointer-events: auto;
     content: "";
     background-color: rgba(0,0,0,0);
+}
+#donaciones .container {
+    background-color: #2c2c2c;
+    border-radius: 20px;
+    color: #fff;
+}
+.donaciones-imagen {
+    transform: rotate(8deg);
+    border-radius: 20px;
+    width: 40vw;
+}
+#discord .container {
+    background-color: #7289DA;
+    border-radius: 20px;
+    color: #fff;
+}
+.discord-imagen {
+    width: 20vw;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 700px) {
+    #donaciones {
+        margin: 20px;
+    }
+    .donaciones-imagen {
+        width: 95vw !important;
+        transform: rotate(5deg);
+        margin-bottom: 50px;
+        margin-left: -33px !important;
+    }
+    #discord {
+        margin: 20px;
+    }
+    .discord-imagen {
+        width: 60vw;
+    }
+    
 }
 
 /* Default webpage */
@@ -243,8 +239,14 @@ nav img {
     color: #fff;
     border: none;
 }
+@media (max-width: 700px) {
+    .article-card {
+        margin-top: 20px;
+    }
+    
+}
 .article-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     -webkit-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
@@ -271,4 +273,126 @@ nav img {
 	color: #fff;
 	font-family: 'Inter';
 	font-weight: 500;
+}
+
+/* Resources items */
+.resource-card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform .2s;
+}
+.resource-card:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 18px 0px rgba(0,0,0,0.75);
+}
+.resource-card .wp-block-group__inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resource-card .wp-block-group__inner-container figure {
+    margin: 0 !important;
+    width: 60px;
+}
+.resource-card-content .wp-block-group__inner-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 700px) {
+    .resource-card .wp-block-group__inner-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+.resource-card-content h2 {
+    font-size: 23px;
+}
+.resource-card-content a {
+    color: #fff;
+}
+.resource-card .btn {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.541);
+    font-weight: 500;
+}
+.recurso-selector {
+    width: 180px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+.recurso-selector img {
+    width: 70px;
+}
+.recurso-selector p {
+    margin: 0;
+    font-weight: 500;
+}
+.selectores-recursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Front page card */
+.front-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.row {
+    width: 100%;
+}
+.front-card {
+    background-color: #2c2c2c;
+    color: #fff;
+    border: none;
+    transition: transform .2s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.front-card:hover {
+    transform: scale(1.05);
+}
+.front-card .card-body {
+    text-align: center;
+}
+.front-card .card-icon img {
+    width: 100px;
+}
+.front-card .card-title {
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* Herramientas */
+#herramientas .container{
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+#herramientas .container .row {
+    margin: 0;
+    padding: 0;
+}
+.tag-cloud-link {
+    width: 10em;
+    background-color: #2c2c2c;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px !important;
+    color: #fff;
 }

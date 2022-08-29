@@ -48,8 +48,10 @@
         </div>
     </div>
     <script>
+        // Initialize dark mode
         var darkMode = 1;
 
+        // Index creation function
         function crearIndice() {
             const allTitles = document.querySelectorAll('#post-content h2, #post-content h3, #post-content h4');
             var indice = "<ul>";
@@ -63,17 +65,47 @@
         
         function changeVisibility() {
             const checkboxVisibility = document.getElementById("changeVisibility");
-            /* Disable or enable dark mode */
+            //Disable or enable dark mode
             if(darkMode == 1) {
+                
                 document.getElementById('post-content').style.backgroundColor = "#fff";
                 document.getElementById('post-content').style.color = "#000";
                 document.getElementById('visibility-text').innerHTML = "Cambiar a oscuro"
+
+                // Sidebar dark mode
+                const sidebarBlocks = document.querySelectorAll('.sidebar-block');
+                sidebarBlocks.forEach(function(element) {
+                    element.style.backgroundColor = '#fff';
+                    element.style.color = '#000';
+                });
+                
+                // Index elements color
+                const indexElements = document.querySelectorAll('#indice ul li a');
+                indexElements.forEach(function(element) {
+                    element.style.color = '#000';
+                })
+
+                // Switch off dark mode
                 darkMode = 0;
+
             } else {
                 document.getElementById('post-content').style.backgroundColor = "#2c2c2cb5";
                 document.getElementById('post-content').style.color = "#fff";
                 document.getElementById('visibility-text').innerHTML = "Cambiar a claro"
                 darkMode = 1;
+
+                // Sidebar dark mode
+                const sidebarBlocks = document.querySelectorAll('.sidebar-block');
+                sidebarBlocks.forEach(function(element) {
+                    element.style.backgroundColor = '#181818';
+                    element.style.color = '#fff';
+                });
+                
+                // Index elements color
+                const indexElements = document.querySelectorAll('#indice ul li a');
+                indexElements.forEach(function(element) {
+                    element.style.color = 'rgba(255, 255, 255, 0.642)';
+                })
             }
             console.log(darkMode);
         }
