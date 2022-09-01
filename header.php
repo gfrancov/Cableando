@@ -29,10 +29,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/formacion">Formación</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/recursos">Discord</a>
+                    <a class="nav-link" href="/formaciones">Formación</a>
                 </li>
             </ul>
         </div>

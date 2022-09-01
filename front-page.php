@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-sm-12 col-lg">
                     <div class="card front-card m-0 mb-4">
-                        <div class="card-body" onclick="window.open('/formacion', '_parent');">
+                        <div class="card-body" onclick="window.open('/formaciones', '_parent');">
                             <h1 class="card-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/graduation.png" alt="Sobrero de graduación"/></h1>
                             <h5 class="card-title mb-0">Formación</h5>
                         </div>

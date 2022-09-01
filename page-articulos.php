@@ -6,7 +6,7 @@
             <div class="card-columns" style="text-align:center;">
         <?php 
                 // the query
-                $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1, 'category__not_in' => array(get_cat_ID('recurso')) )); ?>
+                $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1, 'category__not_in' => array(get_cat_ID('formacion')) )); ?>
                 
                 <?php if ( $wpb_all_query->have_posts() ) : ?>
                 
